@@ -5,6 +5,7 @@ def pascal_triangle(n):
     """exits the code with an empty list if n is less than or equal to 0"""
     if n <= 0:
         return []
+    
     triangle = [0]*n  
 
     for i in range (n):
