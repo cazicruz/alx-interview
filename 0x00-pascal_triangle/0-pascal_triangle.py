@@ -22,4 +22,3 @@ def pascal_triangle(n):
 
         triangle[i] = row
     return triangle
-
