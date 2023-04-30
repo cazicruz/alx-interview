@@ -3,10 +3,9 @@
 
 def canUnlockAll(boxes):
     """ Method that determines if all the boxes can be opened. """
-    if type(boxes) is not list:
+    if type(boxes) is not list or len(boxes) == 0:
             return False
-    if len(boxes) == 0:
-        return False
+
     if len(boxes) == 1:
         return True
     newboxes = []
@@ -23,12 +22,3 @@ def canUnlockAll(boxes):
         return True
     else:
          return False
-    
-boxes = [[1], [2], [3], [4], [0]]
-print(canUnlockAll(boxes))
-
-boxes = [[1, 4, 6], [2], [0, 4, 1], [5, 6, 2], [3], [4, 1], [6]]
-print(canUnlockAll(boxes))
-
-boxes = [[1, 4], [2], [0, 4, 1], [3], [], [4, 1], [5, 6]]
-print(canUnlockAll(boxes))
