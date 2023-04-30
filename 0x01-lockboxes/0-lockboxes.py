@@ -15,6 +15,7 @@ def canUnlockAll(boxes):
             return False """
               
         for j in range(len(boxes[i])):
+            """ checks every item in the internal list"""
             if boxes[i][j] in newboxes or boxes[i][j] > len(boxes) - 1:
                   break
             elif boxes[i][j] == 0:
