@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """ Lockboxes """
 
 def canUnlockAll(boxes):
@@ -13,7 +13,7 @@ def canUnlockAll(boxes):
     for i in range(len(boxes)):
         """if len(boxes[i]) == 0:
             return False """
-              
+
         for j in range(len(boxes[i])):
             """ checks every item in the internal list"""
             if boxes[i][j] in newboxes or boxes[i][j] > len(boxes) - 1:
