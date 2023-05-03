@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Min Operations to get n H characters"""
-from math import sqrt
 
 
 def minOperations(n: int) -> int:
