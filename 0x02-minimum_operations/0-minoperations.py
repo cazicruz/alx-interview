@@ -3,10 +3,15 @@
 
 
 def minOperations(n: int) -> int:
+    """
+    takes param n: int and increment k untill k = n
+    making sure that k is a multiple of n along the way
+    and reutn 0 if n is less than 1
+    """
     increment = 1
     k = 1
     count = 1
-    
+ 
     if n <= 0:
         return 0
     for i in range(n):
