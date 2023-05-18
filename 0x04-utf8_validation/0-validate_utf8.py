@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """ utf-8 validator script
 checks if the list of integers represent the correct encoding
 of the utf-8"""
