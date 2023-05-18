@@ -6,7 +6,7 @@ from typing import List
 
 
 def check(num):
-        mask = 1 << (8-1)
+        mask = 1 <<(8-1)
         i = 0
         while num & mask:
             mask >>= 1
