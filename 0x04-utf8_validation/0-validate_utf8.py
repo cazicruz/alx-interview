@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-utf-8 validator script
+UTF-8 validation module
 checks if the list of integers represent the correct encoding
 of the utf-8
 """
