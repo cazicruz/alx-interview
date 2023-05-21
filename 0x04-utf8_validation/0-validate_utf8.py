@@ -6,6 +6,7 @@ from typing import List
 
 
 def check(num):
+    """checks how many continuation bit the number has"""
         mask = 1 <<(8-1)
         i = 0
         while num & mask:
@@ -15,6 +16,7 @@ def check(num):
 
 
 def validUTF8(data: List) -> bool:
+    """ validates if the data in list id a valid utf-8 data"""
     i = 0
     while i < len(data):
             j = check(data[i])
