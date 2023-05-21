@@ -16,9 +16,12 @@ def check(num):
 
 
 def validUTF8(data: List) -> bool:
-    """ validates if the data in list id a valid utf-8 data"""
+    """ validates if the data in list is
+    a valid utf-8 encodeing"""
     i = 0
     while i < len(data):
+        """ loops tru the datas in the list and
+        performs a check operation on it"""
             j = check(data[i])
             k = i + j - (j != 0)
             i += 1
