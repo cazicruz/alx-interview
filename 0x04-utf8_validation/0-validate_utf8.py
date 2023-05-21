@@ -1,41 +1,39 @@
 #!/usr/bin/python3
-"""
-UTF-8 validation module
-checks if the list of integers represent the correct encoding
-of the utf-8
-"""
-from typing import List
+"""UTF-8 Validation"""
 
 
-def check(num):
+def validUTF8(data):
     """Determines if a given data set
     represents a valid utf-8 encoding
     """
-    mask = 1 <<(8-1)
-    i = 0
-    while num & mask:
-        mask >>= 1
-        i += 1
-    return i
+    number_bytes = 0
 
+    mask_1 = 1 << 7
+    mask_2 = 1 << 6
 
-def validUTF8(data: List) -> bool:
-    """ validates if the data in list is
-    a valid utf-8 encodeing"""
-    i = 0
-    while i < len(data):
-        """ loops tru the datas in the list and
-        performs a check operation on it"""
+    for i in data:
 
-        j = check(data[i])
-        k = i + j - (j != 0)
-        i += 1
+        mask_byte = 1 << 7
 
-        if j == 1 or j > 4 or k >= len(data):
-            return False
-        while i < len(data) and i <= k:
-            cur = check(data[i])
-            if cur != 1: return False
-            i += 1
+        if number_bytes == 0:
 
-    return True
+            while mask_byte & i:
+                number_bytes += 1
+                mask_byte = mask_byte >> 1
+
+            if number_bytes == 0:
+                continue
+
+            if number_bytes == 1 or number_bytes > 4:
+                return False
+
+        else:
+            if not (i & mask_1 and not (i & mask_2)):
+                return False
+
+        number_bytes -= 1
+
+    if number_bytes == 0:
+        return True
+
+    return False
