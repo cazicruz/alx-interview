@@ -26,4 +26,4 @@ def validUTF8(data: List) -> bool:
                 cur = check(data[i])
                 if cur != 1: return False
                 i += 1
-        return True
+    return True
