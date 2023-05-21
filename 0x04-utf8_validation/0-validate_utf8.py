@@ -26,13 +26,16 @@ def validUTF8(data: List) -> bool:
     while i < len(data):
         """ loops tru the datas in the list and
         performs a check operation on it"""
+
         j = check(data[i])
         k = i + j - (j != 0)
         i += 1
+
         if j == 1 or j > 4 or k >= len(data):
             return False
         while i < len(data) and i <= k:
             cur = check(data[i])
             if cur != 1: return False
             i += 1
+
     return True
