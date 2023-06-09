@@ -5,13 +5,18 @@ rotate it 90 degrees clockwise.
 """
 
 def rotate_2d_matrix(matrix):
+    """Rotate a 2D matrix clockwise 90 degrees"""
     container = []
     result =[]
+    m = matrix
     length = len(matrix)
-    for i in range(length -1):
-        for value in matrix:
+    for i in range(length):
+        for value in m:
             new_value = value.pop(0)
-            container.append(new_value)
+            container.insert(0, new_value)
+            #print (container)
+        #matrix[i] = container
         result.append(container)
-    metrix = result
-    yield metrix
+        container = []
+    for i in range(length):
+        matrix[i] = result[i]
