@@ -5,7 +5,7 @@ rotate it 90 degrees clockwise.
 """
 
 def rotate_2d_matrix(matrix):
-    """Rotate a 2D matrix clockwise 90 degrees"""
+    """Rotate a 2D matrix clockwise 90 degrees in place"""
     container = []
     result =[]
     m = matrix
